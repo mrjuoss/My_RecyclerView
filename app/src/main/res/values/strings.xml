@@ -4,4 +4,8 @@
     <string name="grid">Grid</string>
     <string name="with_cardView">with CardView</string>
     <string name="photo_president">Foto President</string>
+    <string name="share">Share</string>
+    <string name="favorite">Favorite</string>
+    <string name="remarks">Remarks</string>
+    <string name="soekarno">Soekarno</string>
 </resources>
