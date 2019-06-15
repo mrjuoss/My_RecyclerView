@@ -2,6 +2,7 @@ package com.mrjuoss.dicoding.myrecyclerview;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_list:
-
+                showRecyclerList();
                 break;
             case R.id.action_grid:
-
+                showRecyclerGrid();
                 break;
             case R.id.action_cardView:
 
@@ -57,5 +58,12 @@ public class MainActivity extends AppCompatActivity {
         ListPresidentAdapter listPresidentAdapter = new ListPresidentAdapter(this);
         listPresidentAdapter.setListPresident(list);
         rvCategory.setAdapter(listPresidentAdapter);
+    }
+
+    private void showRecyclerGrid() {
+        rvCategory.setLayoutManager(new GridLayoutManager(this, 2));
+        GridPresidentAdapter gridPresidentAdapter = new GridPresidentAdapter(this);
+        gridPresidentAdapter.setListPresident(list);
+        rvCategory.setAdapter(gridPresidentAdapter);
     }
 }
